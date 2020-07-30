@@ -1,13 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bc690a0-a15c-4a08-b7f4-8b3033af5b85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Divider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SideMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/routes/Anime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/routes/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/routes/discordTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1eSDhNMrQONjLUdj4qlYQsOo8yf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anthony\WebstormProjects\untitled1\src" />
+      <recent name="C:\Users\Anthony\WebstormProjects\untitled1\src\components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bc690a0-a15c-4a08-b7f4-8b3033af5b85" name="Default Changelist" comment="" />
+      <created>1594306218106</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594306218106</updated>
+      <workItem from="1594306219596" duration="34125000" />
+      <workItem from="1594746178159" duration="612000" />
+      <workItem from="1594945998629" duration="165000" />
+      <workItem from="1595020541156" duration="608000" />
+      <workItem from="1595098793002" duration="3236000" />
+      <workItem from="1595702716286" duration="15866000" />
+      <workItem from="1595784246389" duration="3469000" />
+      <workItem from="1595947078799" duration="13927000" />
+      <workItem from="1596035463510" duration="2204000" />
+      <workItem from="1596039513967" duration="2226000" />
+      <workItem from="1596130196316" duration="1215000" />
+      <workItem from="1596134471201" duration="696000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="529" height="300" key="GridCell.Tab.0.bottom" timestamp="1595996692992">
+      <screen x="1920" y="-417" width="1080" height="1880" />
+    </state>
+    <state width="529" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-417.1080.1880@1920.-417.1080.1880" timestamp="1595996692992" />
+    <state width="529" height="300" key="GridCell.Tab.0.center" timestamp="1595996692992">
+      <screen x="1920" y="-417" width="1080" height="1880" />
+    </state>
+    <state width="529" height="300" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-417.1080.1880@1920.-417.1080.1880" timestamp="1595996692992" />
+    <state width="529" height="300" key="GridCell.Tab.0.left" timestamp="1595996692992">
+      <screen x="1920" y="-417" width="1080" height="1880" />
+    </state>
+    <state width="529" height="300" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-417.1080.1880@1920.-417.1080.1880" timestamp="1595996692992" />
+    <state width="529" height="300" key="GridCell.Tab.0.right" timestamp="1595996692992">
+      <screen x="1920" y="-417" width="1080" height="1880" />
+    </state>
+    <state width="529" height="300" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-417.1080.1880@1920.-417.1080.1880" timestamp="1595996692992" />
+    <state x="491" y="163" key="SettingsEditor" timestamp="1596137833269">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="491" y="163" key="SettingsEditor/0.0.1920.1040/1920.-417.1080.1880@0.0.1920.1040" timestamp="1596137833269" />
   </component>
 </project>
