@@ -2,12 +2,6 @@ import React from "react";
 
 import {Menu, Layout} from "antd";
 import {UserOutlined, VideoCameraOutlined} from "@ant-design/icons";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 
 const {Sider} = Layout;
 
