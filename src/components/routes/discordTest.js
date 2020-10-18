@@ -10,13 +10,18 @@ const {prodToken, stagingToken, environment} = require('../../auth');
 const client = new Discord.Client();
 const {TabPane} = Tabs;
 
+const PMServerId = "583120259708616715";
+const aceRoleId = "600885147625062421";
+let aceRoleReference = {};
+
 export default class Test extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             data: "none",
             appInfo: "none",
-            applicants: "none"
+            applicants: "none",
+            watchlist: "none"
         }
     }
 
@@ -33,8 +38,14 @@ export default class Test extends React.Component {
                 curlist = lists[parseInt(list)]
             }
         }
+        let watchlistedUsers = [];
+        let watchlistedUsersIds = [];
+        for(let [key, value] of Object.entries(appInfo.watchlist)){
+            watchlistedUsers.push(value);
+            watchlistedUsersIds.push(key);
+        }
         let apps = curlist.map(x => x.id);
-        const grabUsers = async () => await findGuild("583120259708616715")
+        const grabUsers = async () => await findGuild(PMServerId)
             .then(await getGuildMembers)
             .then(async members => members
                 .filter(member => apps.includes(member.id)))
@@ -42,15 +53,27 @@ export default class Test extends React.Component {
                 await this.setState({
                     data: members,
                     appInfo: appInfo,
-                    applicants: curlist
+                    applicants: curlist,
+                    watchlist: this.state.watchlist
                 })
             )
             .catch(await handleError);
 
-        //
+        const grabWatchlist = async () => await findGuild(PMServerId)
+            .then(await getGuildMembers)
+            .then(async members => members
+                .filter(member => watchlistedUsersIds.includes(member.id)))
+            .then(x => console.log(x));
+
+        const getAceRole = async () => await findGuild("583120259708616715")
+            .then(await findRole)
+            .then(x => aceRoleReference = x);
 
         client.once('ready', async () => {
             await grabUsers().then(r => console.log("users grabbed."));
+            await getAceRole().then(r => console.log("ace role reference created."));
+            await grabWatchlist();
+            console.log(watchlistedUsers)
         });
     }
 
@@ -62,7 +85,7 @@ export default class Test extends React.Component {
         } else {
             let list = this.state.data.map((y, i) => {
                 let application;
-                this.state.applicants.forEach(x => (x.id === y.user.id) ? application = x: "");
+                this.state.applicants.forEach(x => (x.id === y.user.id) ? application = x : "");
                 return (
                     <ApplicantDisplay profile={y} application={application}/>
                 )
@@ -95,6 +118,21 @@ export default class Test extends React.Component {
     }
 }
 
+async function addRole(user) {
+    console.log("Ace Trainer Role Given to " + user.user.username);
+    await findGuild(PMServerId)
+        .then(x => findMember(x, "115270563349528579"))
+        .then(y => y.roles.add(aceRoleReference))
+}
+
+async function findMember(guild, memberId) {
+    return guild.members.cache.find(x => x.id === memberId);
+}
+
+async function findRole(guild) {
+    return guild.roles.cache.find(x => x.id === aceRoleId);
+}
+
 async function findGuild(id) {
     return client.guilds.cache.find(x => x.id === id);
 }
@@ -120,7 +158,7 @@ async function consumeAppApi() {
         .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 }
 
-function ApplicantDisplay(props){
+function ApplicantDisplay(props) {
     const application = props.application;
     const profile = props.profile;
     return (
@@ -133,9 +171,10 @@ function ApplicantDisplay(props){
         }}>
             <Row style={{marginBottom: "20px"}} type="flex" align="middle">
                 <Col flex="1 1 150px">
-                                <span>
-                                <Avatar src={profile.user.avatarURL()}/> {profile.user.username + "#" + profile.user.discriminator}
-                            </span>
+                    <span>
+                        <Avatar src={profile.user.avatarURL()}/>
+                        {profile.user.username + "#" + profile.user.discriminator}
+                    </span>
                 </Col>
                 <Col flex="0 1 300px">
                     <div style={{
@@ -155,6 +194,7 @@ function ApplicantDisplay(props){
                                     display: 'inline-block',
                                     verticalAlign: 'middle'
                                 }}
+                                onClick={() => addRole(profile)}
                             />
                             <Button
                                 type="primary"

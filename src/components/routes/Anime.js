@@ -46,18 +46,18 @@ export default class Anime extends React.Component {
 }
 
 function calcTimeLeft(timeStamp) {
-    let days =  new Date(new Date(timeStamp * 1000).getTime() - Date.now()) / 1000 / 60 / 60 / 24;
+    let days = new Date(new Date(timeStamp * 1000).getTime() - Date.now()) / 1000 / 60 / 60 / 24;
     let hourRemainder = days - Math.floor(days);
     let hours = (hourRemainder) * 24;
-    let minuteRemainder  = hours - Math.floor(hours);
+    let minuteRemainder = hours - Math.floor(hours);
     let minutes = (minuteRemainder) * 60;
     console.log(hours, minuteRemainder);
-    return Math.floor(days) + " days, " +  Math.floor(hours) + " hours, and " + Math.floor(minutes) + " minutes until the next episode";
+    return Math.floor(days) + " days, " + Math.floor(hours) + " hours, and " + Math.floor(minutes) + " minutes until the next episode";
 }
 
 var query = `
-query ($id: Int) { # Define which variables will be used in the query (id)
-  Media (id: $id, type: ANIME) { # Insert our variables into the query arguments (id) (type: ANIME is hard-coded in the query)
+query ($id: Int) {
+  Media (id: $id, type: ANIME) {
     id
     episodes
     season
