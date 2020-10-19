@@ -56,7 +56,6 @@
     padding: 12px 28px;
     display: flex;
     flex-grow: 1;
-
     color: white;
 }
 
@@ -65,7 +64,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, span, div {
-  color: white !important;
+    color: white !important;
 }
 
 .Divider {
@@ -76,3 +75,51 @@ h1, h2, h3, h4, h5, h6, span, div {
 button {
     color: black;
 }
+
+.LogoButton {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.LogoButton:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
+
+.CardImage {
+    padding-bottom: 32px;
+    max-width: 250px;
+    max-height: 250px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.CardImageContainer {
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 250px;
+    min-width: 250px;
+}
+

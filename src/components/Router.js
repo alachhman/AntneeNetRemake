@@ -5,8 +5,8 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "./routes/Home";
-import Anime from "./routes/Anime";
-import Test from "./routes/discordTest";
+import {TrainerList} from "./routes/TrainerList";
+import {Trainer} from "./routes/Trainer"
 import '../App.css';
 import Divider from "./Divider";
 
@@ -15,10 +15,8 @@ export default class Routs extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/anime" component={Anime}/>
-                    <Route exact path="/manga" component={Manga}/>
-                    <Route exact path="/test" component={Test}/>
-                    <Route path="/" component={Home}/>
+                    <Route path="/trainer/" component={Trainer}/>
+                    <Route path="/" component={TrainerList}/>
                 </Switch>
             </Router>
         )

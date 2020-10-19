@@ -5,7 +5,6 @@ import {Layout} from "antd";
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
-import SideMenu from "./components/SideMenu";
 import FooterBar from "./components/Footer";
 import Routs from "./components/Router";
 
@@ -16,14 +15,9 @@ function App() {
                 <div className={"Header"}>
                     <NavBar/>
                 </div>
-                <Layout>
-                    <SideMenu/>
-                    <Layout>
-                        <div className={"Body"}>
-                            <Routs/>
-                        </div>
-                    </Layout>
-                </Layout>
+                <div className={"Body"}>
+                    <Routs/>
+                </div>
                 <div className={"Footer"}>
                     <FooterBar/>
                 </div>

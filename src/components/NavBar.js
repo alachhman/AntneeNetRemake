@@ -3,10 +3,10 @@ import {
     Navbar,
     NavbarBrand,
     Nav,
-    InputGroup,
-    InputGroupAddon,
-    FormInput,
+    NavItem,
+    NavLink,
 } from "shards-react";
+import {Tooltip} from "antd";
 
 export default class NavBar extends React.Component {
     constructor(props) {
@@ -16,14 +16,21 @@ export default class NavBar extends React.Component {
     render() {
         return (
             <Navbar type="dark" theme="dark" expand="md">
-                <NavbarBrand href="/">AntneeNet</NavbarBrand>
-                    <Nav navbar className="ml-auto">
-                        <InputGroup size="sm" seamless>
-                            <InputGroupAddon type="prepend">
-                            </InputGroupAddon>
-                            <FormInput className="border-0" placeholder="Search..."/>
-                        </InputGroup>
-                    </Nav>
+                <NavbarBrand>AntneeNet</NavbarBrand>
+                <Nav navbar className="ml-auto">
+                    <Tooltip placement="left" title={"Sync Pairs"}>
+                        <NavItem className={"LogoButton"}>
+                            <NavLink active href="/">
+                                <img
+                                    src={"/pokeball.png"}
+                                    alt={"pokeball"}
+                                    style={{height: "30px", width: "30px"}}
+                                />
+                            </NavLink>
+                        </NavItem>
+                    </Tooltip>
+
+                </Nav>
             </Navbar>
         );
     }
