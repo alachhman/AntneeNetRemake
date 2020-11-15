@@ -7,7 +7,6 @@ const antIcon = <LoadingOutlined style={{fontSize: 24}} spin/>;
 const {Meta} = Card;
 const {Search} = Input;
 
-
 export function TrainerList(props) {
     const [trainers, setTrainers] = useState([]);
     const [filteredList, setFilteredList] = useState([]);

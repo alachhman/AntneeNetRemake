@@ -27,7 +27,7 @@ function Manga() {
     return (
         <div style={{width:"100%"}}>
             <h3>
-                Manga
+                Coom
             </h3>
             <Divider/>
         </div>
