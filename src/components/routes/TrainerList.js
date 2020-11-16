@@ -75,7 +75,7 @@ export function TrainerList(props) {
 const TrainerDisplay = (props) => {
     const trainerData = props.trainer;
     return (
-        <a href={"/trainer/" + trainerData.name}>
+        <a href={"#/trainer/" + trainerData.name}>
             <Card style={{
                 background: "#5a6169",
                 borderRadius: "25px",

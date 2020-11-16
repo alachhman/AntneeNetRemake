@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
@@ -13,7 +13,7 @@ import Divider from "./Divider";
 export default class Routs extends React.Component {
     render() {
         return (
-            <Router>
+            <Router basename={"/"}>
                 <Switch>
                     <Route path="/trainer/" component={Trainer}/>
                     <Route path="/" component={TrainerList}/>
