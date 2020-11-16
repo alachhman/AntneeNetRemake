@@ -13,7 +13,7 @@ export function Trainer() {
     const [trainer] = useState(window.location.href.split("/trainer/")[1]);
     const [trainerData, setTrainerData] = useState({});
     const fetchTrainerData = async () => {
-        setTrainerData(await fetch("http://pokemasdb.com/trainer/" + trainer)
+        setTrainerData(await fetch("https://pokemasdb.com/trainer/" + trainer)
             .then(response => response.json()))
     };
 

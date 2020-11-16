@@ -12,7 +12,7 @@ export function TrainerList(props) {
     const [filteredList, setFilteredList] = useState([]);
     const [isFiltered, setIsFiltered] = useState(false);
     const fetchTrainerData = async () => {
-        setTrainers(await fetch("http://pokemasdb.com/trainer")
+        setTrainers(await fetch("https://pokemasdb.com/trainer")
             .then(response => response.json())
             .then(json => json.trainers))
     };
